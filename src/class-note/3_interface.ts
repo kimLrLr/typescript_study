@@ -1,67 +1,67 @@
-interface User {
-    age: number;
-    name: string;
-}
+// interface User {
+//     age: number;
+//     name: string;
+// }
 
-// 변수에 인터페이스 활용
-var seho: User = {
-    age: 33,
-    name: '세호'
-}
+// // 변수에 인터페이스 활용
+// var seho: User = {
+//     age: 33,
+//     name: '세호'
+// }
 
-// 함수에 인터페이스 활용
-function getUser(user: User) {
-    console.log(user);
-}
-const LrLr = {
-    name: '나나',
-    age: 100
-}
-getUser(LrLr);
+// // 함수에 인터페이스 활용
+// function getUser(user: User) {
+//     console.log(user);
+// }
+// const LrLr = {
+//     name: '나나',
+//     age: 100
+// }
+// getUser(LrLr);
 
-// 함수의 스펙(구조)에 인터페이스를 활용
-interface SumFunction {
-    (a: number, b: number): number;
-}
+// // 함수의 스펙(구조)에 인터페이스를 활용
+// interface SumFunction {
+//     (a: number, b: number): number;
+// }
 
-var sum: SumFunction;
-sum = function(a: number, b: number): number {
-    return a + b;
-}
+// var sum: SumFunction;
+// sum = function(a: number, b: number): number {
+//     return a + b;
+// }
 
-// 인덱싱
-interface StringArray {
-    [index: number]: string;
-}
+// // 인덱싱
+// interface StringArray {
+//     [index: number]: string;
+// }
 
-var arr: StringArray = ['a', 'b', 'c'];
-// arr[0] = '10';
+// var arr: StringArray = ['a', 'b', 'c'];
+// // arr[0] = '10';
 
-// 딕셔너리 패턴
-interface StringRegexDictionary {
-    [key: string]: RegExp
-}
+// // 딕셔너리 패턴
+// interface StringRegexDictionary {
+//     [key: string]: RegExp
+// }
 
-var obj: StringRegexDictionary = {
-    // sth: /abc/,
-    cssFile: /\.css$/,
-    jsFile: /\.js$/,
-}
+// var obj: StringRegexDictionary = {
+//     // sth: /abc/,
+//     cssFile: /\.css$/,
+//     jsFile: /\.js$/,
+// }
 
-Object.keys(obj).forEach(function(value) {});
+// Object.keys(obj).forEach(function(value) {});
 
-// 인터페이스 확장
-interface Person {
-    name: string;
-    age: number;
-}
+// // 인터페이스 확장
+// interface Person {
+//     name: string;
+//     age: number;
+// }
 
-interface Developer extends Person {
-    language: string;
-}
+// interface Developer extends Person {
+//     language: string;
+// }
 
-var lrlr: Developer = {
-    language: 'ts',
-    age: 100,
-    name: '나나'
-}
+// var lrlr: Developer = {
+//     language: 'ts',
+//     age: 100,
+//     name: '나나'
+// }
