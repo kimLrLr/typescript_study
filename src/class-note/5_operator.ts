@@ -27,16 +27,20 @@ interface Person {
     age: number;
 }
 
-function askSomeone(someone: Developer | Person) {
-    // someone.name;
-    // someone.skill;
-    // someone.age;
-}
-// function askSomeone(someone: Developer & Person) {
-//     someone.name;
-//     someone.age;
-//     someone.skill;
+// function askSomeone(someone: Developer | Person) {
+//     // someone.name;
+//     // someone.skill;
+//     // someone.age;
 // }
+
+function askSomeone(someone: Developer & Person) {
+    someone.name;
+    someone.age;
+    someone.skill;
+    }
+
+askSomeone({ name: '개발자', skill: '웹 개발', age: 100 });
+// askSomeone({ name: '나나', age: 100 });
 
 // 인터섹션 타입 &
 var lrlr: string | number | boolean;
